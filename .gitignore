@@ -1,0 +1,36 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local data outputs (keep sample inputs in shared/datasets)
+**/output/
+**/data/processed/
+**/data/raw/local/
+*.db
+*.duckdb
+
+# Airflow
+airflow.db
+airflow.cfg
+logs/
+curriculum/phase-04-etl-orchestration/airflow_home/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Env & secrets
+.env
+.env.local
+*.pem
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db

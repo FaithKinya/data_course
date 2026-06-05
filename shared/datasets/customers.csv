@@ -1,0 +1,11 @@
+customer_id,name,email,city,country,signup_date
+1,Alice Johnson,alice@email.com,New York,USA,2023-06-01
+2,Bob Smith,bob@email.com,London,UK,2023-06-15
+3,Carol Lee,carol@email.com,Toronto,Canada,2023-07-01
+4,David Kim,david@email.com,Seoul,South Korea,2023-07-20
+5,Eva Martinez,eva@email.com,Madrid,Spain,2023-08-05
+6,Frank Brown,frank@email.com,Sydney,Australia,2023-08-18
+7,Grace Wilson,grace@email.com,Berlin,Germany,2023-09-02
+8,Henry Davis,henry@email.com,Paris,France,2023-09-14
+9,Ivy Chen,ivy@email.com,Singapore,Singapore,2023-10-01
+10,Jack Taylor,jack@email.com,Chicago,USA,2023-10-20

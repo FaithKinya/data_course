@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Cleaned order lines from ShopStream CSV export.
+    columns:
+      - name: order_id
+        description: Primary key for the order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: FK to customer.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: status
+        description: Order lifecycle status.
+        tests:
+          - accepted_values:
+              values: ['completed', 'cancelled', 'refunded']
+      - name: quantity
+        description: Units ordered; must be positive.
+      - name: unit_price
+        description: Price per unit at time of order.
+
+  - name: stg_customers
+    description: Customer dimension source from CSV.
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: Product catalog from CSV.
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
